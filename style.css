@@ -1,0 +1,55 @@
+/* ===== CUSTOMIZE HERE: change these values to restyle every page ===== */
+:root{
+  --accent:#1f6f8b;                 /* links, tags, buttons */
+  --bg:#f5f7f8;                     /* page background */
+  --surface:#ffffff;                /* code header, avatar text */
+  --text:#1c2530;                   /* main text */
+  --muted:#5d6b78;                  /* secondary text */
+  --line:#d9e0e5;                   /* borders */
+  --font-heading:"Bricolage Grotesque",Georgia,serif;
+  --font-body:"IBM Plex Sans",system-ui,sans-serif;
+  --radius:6px;
+}
+/* Dark mode. Delete this whole block if you only want one look. */
+@media (prefers-color-scheme:dark){
+  :root{--accent:#6cc4e0;--bg:#12181e;--surface:#1a222a;--text:#e6ecf0;--muted:#9aa8b4;--line:#2b3641}
+}
+/* ===== END CUSTOMIZE ===== */
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:1.0625rem/1.65 var(--font-body)}
+h1,h2,h3{font-family:var(--font-heading);line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);letter-spacing:-.02em}
+h2{font-size:1.6rem;margin-top:2.5rem}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+
+nav{border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem;flex-wrap:wrap}
+nav .brand{font-family:var(--font-heading);font-weight:700;color:var(--text);text-decoration:none}
+nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--accent)}
+
+.hero{padding:3.5rem 0 1rem;display:flex;gap:1.75rem;align-items:center;flex-wrap:wrap}
+.avatar{width:7rem;height:7rem;border-radius:50%;background:var(--accent);color:var(--surface);display:grid;place-items:center;font:700 2.2rem var(--font-heading);object-fit:cover;flex:none}
+.hero p{color:var(--muted);margin:.25rem 0 1rem;max-width:34rem}
+.links a{margin-right:1.1rem}
+
+.project{border-left:4px solid var(--line);padding:.2rem 0 .2rem 1.1rem;margin:1.6rem 0}
+.project:hover{border-left-color:var(--accent)}
+.project h3{margin:0 0 .15em;font-size:1.3rem}
+.project h3 a{text-decoration:none}
+.project h3 a:hover{text-decoration:underline}
+.tag{display:inline-block;font-size:.85rem;color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:0 .6rem;margin-left:.5rem;vertical-align:middle}
+.project p{margin:.2rem 0;color:var(--muted)}
+
+.meta{color:var(--muted);margin:-.2rem 0 1.5rem}
+figure.code{margin:1.25rem 0;border-radius:var(--radius);overflow:hidden;background:#282c34}
+figure.code figcaption{background:#21252b;color:#abb2bf;font:.85rem ui-monospace,Consolas,monospace;padding:.5rem 1rem}
+figure.code pre{margin:0;overflow-x:auto}
+figure.code code{font:.9rem/1.55 ui-monospace,Consolas,monospace;padding:1rem!important}
+pre.plain{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1rem;overflow-x:auto;font:.9rem/1.5 ui-monospace,Consolas,monospace}
+img{max-width:100%;border-radius:var(--radius)}
+footer{margin-top:4rem;padding:1.5rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}

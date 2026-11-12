@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maze Solver | Alex Rivera</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html">Alex Rivera</a>
+    <ul>
+      <li><a href="../index.html#projects">All projects</a></li>
+      <li><a href="https://github.com/YOUR-USERNAME">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+  <h1 style="margin-top:2.5rem">Maze Solver</h1>
+  <p class="meta">C++ · CS 201 Data Structures · Fall 2026</p>
+
+  <p>One short paragraph: what the program does and why it’s interesting.</p>
+
+  <h2>How to run it</h2>
+  <pre class="plain">g++ -std=c++17 main.cpp -o maze
+./maze maze1.txt</pre>
+
+  <h2>Sample output</h2>
+  <pre class="plain">Shortest path found: 23 steps
+#########
+#S..#...#
+#.#.#.#.#
+#.#...#E#
+#########</pre>
+  <!-- Screenshot instead? Use: <img src="maze-screenshot.png" alt="Maze solver output"> -->
+
+  <h2>The code</h2>
+  <!-- CODE: paste your code between the tags exactly as it is. No escaping needed.
+       Set data-lang to cpp, java, or python. Copy the whole <script> block for each extra file.
+       The only thing that can’t appear inside is the text "</script>". -->
+  <script type="text/plain" class="code-src" data-lang="cpp" data-file="main.cpp">
+#include <iostream>
+#include <queue>
+#include <vector>
+
+int main() {
+    std::queue<int> frontier;
+    std::vector<int> visited;
+    std::cout << "Replace this with your own code!" << std::endl;
+    return 0;
+}
+  </script>
+
+  <h2>What I learned</h2>
+  <p>Two or three sentences on what was hard, what you’d improve, and what you’d do differently.</p>
+
+  <p><a href="../index.html#projects">Back to all projects</a></p>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Alex Rivera</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+document.querySelectorAll('script.code-src').forEach(function (s) {
+  var fig = document.createElement('figure'); fig.className = 'code';
+  var cap = document.createElement('figcaption'); cap.textContent = s.dataset.file || '';
+  var pre = document.createElement('pre'), code = document.createElement('code');
+  code.className = 'language-' + s.dataset.lang;
+  code.textContent = s.textContent.replace(/^\n/, '').replace(/\s+$/, '');
+  pre.appendChild(code); fig.append(cap, pre); s.after(fig);
+  hljs.highlightElement(code);
+});
+</script>
+</body>
+</html>
